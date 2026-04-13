@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router";
 import MainLayout from "../layout/MainLayout";
 import Homepage from "../pages/homepage/Homepage";
 import Timeline from "../pages/timeline/Timeline";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 
 export const router = createBrowserRouter([
@@ -18,6 +19,6 @@ export const router = createBrowserRouter([
         element: <Timeline></Timeline>
       }
     ],
-    errorElement: <h2>Page Not found</h2>
+    errorElement: <ErrorPage></ErrorPage>
   }
 ])
