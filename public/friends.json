@@ -1,0 +1,121 @@
+[
+    {
+        "id": 1,
+        "name": "John Doe",
+        "picture": "https://i.ibb.co/Nnsf6KJ8/Ellipse-1-1.png",
+        "email": "john.doe@example.com",
+        "days_since_contact": 45,
+        "status": "overdue",
+        "tags": [
+            "college",
+            "hiking"
+        ],
+        "bio": "Met in university during engineering. We bonded over hiking trips and late-night coding sessions.",
+        "goal": 14,
+        "next_due_date": "2026-03-20"
+    },
+    {
+        "id": 2,
+        "name": "Aisha Khan",
+        "picture": "https://i.ibb.co/b5C0qFVL/Ellipse-1.png",
+        "email": "aisha.khan@example.com",
+        "days_since_contact": 10,
+        "status": "almost due",
+        "tags": [
+            "work",
+            "design"
+        ],
+        "bio": "Colleague from a design studio. Always exchanging creative ideas and inspiration.",
+        "goal": 14,
+        "next_due_date": "2026-04-18"
+    },
+    {
+        "id": 3,
+        "name": "Rahul Sen",
+        "picture": "https://i.ibb.co/QFw0r4yS/Ellipse-1-2.png",
+        "email": "rahul.sen@example.com",
+        "days_since_contact": 5,
+        "status": "on-track",
+        "tags": [
+            "school",
+            "cricket"
+        ],
+        "bio": "Childhood friend from school days. Still play cricket together on weekends.",
+        "goal": 14,
+        "next_due_date": "2026-04-25"
+    },
+    {
+        "id": 4,
+        "name": "Maria Fernandes",
+        "picture": "https://i.ibb.co/SwdYMP6d/Ellipse-1-3.png",
+        "email": "maria.fernandes@example.com",
+        "days_since_contact": 60,
+        "status": "overdue",
+        "tags": [
+            "travel",
+            "photography"
+        ],
+        "bio": "Met during a college trip to Goa. We share a love for travel photography.",
+        "goal": 14,
+        "next_due_date": "2026-03-10"
+    },
+    {
+        "id": 5,
+        "name": "David Lee",
+        "picture": "https://i.ibb.co/WN6VxYkd/Ellipse-1-4.png",
+        "email": "david.lee@example.com",
+        "days_since_contact": 3,
+        "status": "on-track",
+        "tags": [
+            "gym"
+        ],
+        "bio": "Gym partner turned close friend. We motivate each other to stay fit.",
+        "goal": 14,
+        "next_due_date": "2026-04-28"
+    },
+    {
+        "id": 6,
+        "name": "Priya Nair",
+        "picture": "https://i.ibb.co/R4G0NT6h/Ellipse-1-5.png",
+        "email": "priya.nair@example.com",
+        "days_since_contact": 12,
+        "status": "almost due",
+        "tags": [
+            "mentor",
+            "tech"
+        ],
+        "bio": "Met at a startup event. She often shares valuable career advice.",
+        "goal": 14,
+        "next_due_date": "2026-04-16"
+    },
+    {
+        "id": 7,
+        "name": "Omar Hassan",
+        "picture": "https://i.ibb.co/dsJHHF9j/Ellipse-1-6.png",
+        "email": "omar.hassan@example.com",
+        "days_since_contact": 90,
+        "status": "overdue",
+        "tags": [
+            "travel",
+            "photography"
+        ],
+        "bio": "Met while traveling abroad. We stayed in touch but lost regular contact over time.",
+        "goal": 14,
+        "next_due_date": "2026-02-25"
+    },
+    {
+        "id": 8,
+        "name": "Sophie Martin",
+        "picture": "https://i.ibb.co/hF6KB5Gv/Ellipse-1-7.png",
+        "email": "sophie.martin@example.com",
+        "days_since_contact": 2,
+        "status": "on-track",
+        "tags": [
+            "culture",
+            "family"
+        ],
+        "bio": "Met during a language exchange program. We practice French and English together.",
+        "goal": 14,
+        "next_due_date": "2026-04-30"
+    }
+]
