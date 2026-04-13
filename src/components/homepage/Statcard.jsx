@@ -9,7 +9,7 @@ const Statcard = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
                     <div className="border border-gray-200 rounded-2xl shadow-md p-6 text-center hover:shadow-lg transition">
-                        <h2 className="text-3xl font-bold text-[#244D3F]">10</h2>
+                        <h2 className="text-3xl font-bold text-[#244D3F]">8</h2>
                         <p className="mt-2 text-gray-500">Total Friends</p>
                     </div>
 

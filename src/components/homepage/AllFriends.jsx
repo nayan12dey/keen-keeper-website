@@ -17,11 +17,11 @@ const AllFriends = () => {
         <div className='container mx-auto my-12'>
             <h2 className='font-bold text-2xl'>Your Friends</h2>
 
-            <div className='grid grid-cols-4 gap-6 my-13'>
+            <div className='grid grid-cols-4 gap-6 my-13 '>
                 {
                     friends.map(friend => {
                         return (
-                            <div key={friend.id} className="card bg-base-200 shadow-sm p-4 w-auto">
+                            <div key={friend.id} className="card bg-base-200 shadow-sm p-4 w-auto hover:shadow-lg transition">
                                 <figure>
                                     <img src={friend.picture} alt={friend.name} />
                                 </figure>
