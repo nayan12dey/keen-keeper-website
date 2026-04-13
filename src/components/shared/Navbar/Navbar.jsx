@@ -1,8 +1,17 @@
 
 
 import React from 'react';
+import { Link, NavLink } from 'react-router';
+import { RiHome2Line } from "react-icons/ri";
+import { CiClock2 } from "react-icons/ci";
+import { VscGraphLine } from "react-icons/vsc";
+
+
 
 const Navbar = () => {
+
+
+
     return (
         <div className="navbar bg-base-100 shadow-sm">
             <div className="navbar-start">
@@ -13,7 +22,9 @@ const Navbar = () => {
                     <ul
                         tabIndex="-1"
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                    
+                        <li><Link to={"/"}>Home</Link></li>
+                        <li><Link to={"/timeline"}>Timeline</Link></li>
+                        <li><Link to={"/stats"}>Stats</Link></li>
 
                     </ul>
                 </div>
@@ -21,11 +32,15 @@ const Navbar = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    
+
                 </ul>
             </div>
-            <div className="navbar-end">
-                <a className="btn bg-[#244D3F] text-white">Button</a>
+            <div className="navbar-end gap-2 hidden md:flex">
+                <NavLink to={"/"} className={({ isActive }) =>
+                    `btn ${isActive ? "bg-[#244D3F] text-white" : ""}`}><RiHome2Line className='text-xl' />Home</NavLink>
+                <NavLink to={"/timeline"} className={({isActive}) => `btn ${isActive ? "bg-[#244D3F] text-white" : ""}`}><CiClock2 className='text-xl' />Timeline</NavLink>
+                <NavLink to={"/stats"} className={({isActive}) => `btn ${isActive ? "bg-[#244D3F] text-white" : ""}`}><VscGraphLine className='text-xl' />
+                    Stats</NavLink>
             </div>
         </div>
     );
