@@ -79,10 +79,10 @@ const AllFriends = () => {
         //     </div>
         // </div>
 
-        <div className='container mx-auto my-12'>
+        <div className='container mx-auto px-5 my-12'>
             <h2 className='font-bold text-2xl'>Your Friends</h2>
 
-            <div className='grid grid-cols-4 gap-6 my-13'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 my-13'>
                 {
                     friends.map(friend => {
                         return (
@@ -138,3 +138,6 @@ const AllFriends = () => {
 };
 
 export default AllFriends;  
+
+
+
