@@ -3,9 +3,9 @@
         "id": 1,
         "name": "John Doe",
         "picture": "https://i.ibb.co/Nnsf6KJ8/Ellipse-1-1.png",
-        "email": "john.doe@example.com",
+        "email": "john.doe@gmail.com",
         "days_since_contact": 45,
-        "status": "overdue",
+        "status": "Overdue",
         "tags": [
             "college",
             "hiking"
@@ -18,9 +18,9 @@
         "id": 2,
         "name": "Aisha Khan",
         "picture": "https://i.ibb.co/b5C0qFVL/Ellipse-1.png",
-        "email": "aisha.khan@example.com",
+        "email": "aisha.khan@gmail.com",
         "days_since_contact": 10,
-        "status": "almost due",
+        "status": "Almost due",
         "tags": [
             "work",
             "design"
@@ -33,9 +33,9 @@
         "id": 3,
         "name": "Rahul Sen",
         "picture": "https://i.ibb.co/QFw0r4yS/Ellipse-1-2.png",
-        "email": "rahul.sen@example.com",
+        "email": "rahul.sen@gmail.com",
         "days_since_contact": 5,
-        "status": "on-track",
+        "status": "On-track",
         "tags": [
             "school",
             "cricket"
@@ -48,9 +48,9 @@
         "id": 4,
         "name": "Maria Fernandes",
         "picture": "https://i.ibb.co/SwdYMP6d/Ellipse-1-3.png",
-        "email": "maria.fernandes@example.com",
+        "email": "maria.fernandes@gmail.com",
         "days_since_contact": 60,
-        "status": "overdue",
+        "status": "Overdue",
         "tags": [
             "travel",
             "photography"
@@ -63,9 +63,9 @@
         "id": 5,
         "name": "David Lee",
         "picture": "https://i.ibb.co/WN6VxYkd/Ellipse-1-4.png",
-        "email": "david.lee@example.com",
+        "email": "david.lee@gmail.com",
         "days_since_contact": 3,
-        "status": "on-track",
+        "status": "On-track",
         "tags": [
             "gym"
         ],
@@ -77,9 +77,9 @@
         "id": 6,
         "name": "Priya Nair",
         "picture": "https://i.ibb.co/R4G0NT6h/Ellipse-1-5.png",
-        "email": "priya.nair@example.com",
+        "email": "priya.nair@gmail.com",
         "days_since_contact": 12,
-        "status": "almost due",
+        "status": "Almost due",
         "tags": [
             "mentor",
             "tech"
@@ -92,9 +92,9 @@
         "id": 7,
         "name": "Omar Hassan",
         "picture": "https://i.ibb.co/dsJHHF9j/Ellipse-1-6.png",
-        "email": "omar.hassan@example.com",
+        "email": "omar.hassan@gmail.com",
         "days_since_contact": 90,
-        "status": "overdue",
+        "status": "Overdue",
         "tags": [
             "travel",
             "photography"
@@ -107,9 +107,9 @@
         "id": 8,
         "name": "Sophie Martin",
         "picture": "https://i.ibb.co/hF6KB5Gv/Ellipse-1-7.png",
-        "email": "sophie.martin@example.com",
+        "email": "sophie.martin@gmail.com",
         "days_since_contact": 2,
-        "status": "on-track",
+        "status": "On-track",
         "tags": [
             "culture",
             "family"
@@ -118,4 +118,4 @@
         "goal": 14,
         "next_due_date": "2026-04-30"
     }
-]
+]    

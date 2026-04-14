@@ -1,6 +1,7 @@
 
 
 import React, { use } from 'react';
+import { Link } from 'react-router';
 
 
 
@@ -10,7 +11,7 @@ const AllFriends = () => {
 
     const friends = use(friendsPromise);
 
-    console.log(friends)
+    // console.log(friends)
 
 
     return (
@@ -21,7 +22,7 @@ const AllFriends = () => {
                 {
                     friends.map(friend => {
                         return (
-                            <div key={friend.id} className="card bg-base-200 shadow-sm p-4 w-auto hover:shadow-lg transition">
+                            <Link to={`/friendDetails/${friend.id}`} key={friend.id} className="card bg-base-200 shadow-sm p-4 w-auto hover:shadow-lg transition">
                                 <figure>
                                     <img src={friend.picture} alt={friend.name} />
                                 </figure>
@@ -38,18 +39,18 @@ const AllFriends = () => {
                                     <div className="card-actions justify-center">
                                         {friend.tags.map((tag, index) => (
                                             <div key={index} className="badge bg-[#CBFADB] text-[#244D3F] font-semibold">
-                                                {tag}
+                                                {tag.toUpperCase()}
                                             </div>
                                         ))}
                                     </div>
 
                                     <div className="flex justify-center mt-2">
-                                        <div className={`border rounded-xl px-2 py-1 text-white ${friend.status === "overdue" ? "bg-red-500" : friend.status === "almost due" ? "bg-yellow-500" :  "bg-[#244D3F]"}`}>
+                                        <div className={`border rounded-xl px-2 py-1 text-white ${friend.status === "Overdue" ? "bg-red-500" : friend.status === "Almost due" ? "bg-yellow-500" :  "bg-[#244D3F]"}`}>
                                             {friend.status}
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </Link>
                         );
                     })
                 }
@@ -58,4 +59,4 @@ const AllFriends = () => {
     );
 };
 
-export default AllFriends;
+export default AllFriends;  
