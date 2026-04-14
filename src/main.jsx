@@ -8,12 +8,19 @@ import MainLayout from './layout/MainLayout.jsx';
 import Homepage from './pages/homepage/Homepage.jsx';
 import Timeline from './pages/timeline/Timeline.jsx';
 import { router } from './routes/Routes.jsx';
+import FriendProvider from './context/FriendProvider.jsx';
+import { ToastContainer } from 'react-toastify';
 
 
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <FriendProvider>
+      <RouterProvider router={router} />
+    </FriendProvider>
+
+    <ToastContainer />
+
   </StrictMode>,
 )

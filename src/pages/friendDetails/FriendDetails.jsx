@@ -1,6 +1,6 @@
 
 
-import React, { use } from 'react';
+import React, { use, useContext, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router';
 import { PiBellSimpleZ } from "react-icons/pi";
 import { BiBox } from "react-icons/bi";
@@ -8,12 +8,7 @@ import { RiDeleteBinLine } from "react-icons/ri";
 import { FiPhoneCall } from "react-icons/fi";
 import { LuMessageSquareMore } from "react-icons/lu";
 import { PiVideoCameraBold } from "react-icons/pi";
-
-
-
-
-
-
+import { FriendContext } from '../../context/FriendProvider';
 
 
 
@@ -28,14 +23,14 @@ const FriendDetails = () => {
     // const friends = use(friendsPromise);
 
     const friends = useLoaderData();
-    console.log(friends)
+    // console.log(friends)
 
 
     const expectedFriend = friends.find(friend => friend.id === Number(friendId));
-    console.log(expectedFriend)
+    // console.log(expectedFriend)
 
 
-    // for date
+    // for showing due date
     const formatDate = (dateStr) => {
         const [y, m, d] = dateStr.split("-");
         const date = new Date(y, m - 1, d);
@@ -46,6 +41,12 @@ const FriendDetails = () => {
             year: "numeric",
         });
     };
+
+
+    // used context api from friendProvider
+    const {handleCall, storedFriends, handleText, handleVideo} = useContext(FriendContext);
+    // console.log("friendContext", handleCall);
+    // console.log("StoredFriends", storedFriends)
 
 
     return (
@@ -160,13 +161,13 @@ const FriendDetails = () => {
                 <div className='border border-gray-200 rounded-2xl shadow-md p-6 hover:shadow-lg transition flex flex-col text-left my-5 space-y-3'>
                     <p className='text-lg text-[#244D3F]'>Quick Check-In</p>
                     <div className="grid grid-cols-3 gap-3">
-                        <button className='btn py-10 flex flex-col items-center justify-center gap-2'>
+                        <button className='btn py-10 flex flex-col items-center justify-center gap-2' onClick={() => handleCall(expectedFriend)}>
                             <span className='text-2xl'><FiPhoneCall /></span>
                             Call</button>
-                        <button className='btn py-10 flex flex-col items-center justify-center gap-2'>
+                        <button className='btn py-10 flex flex-col items-center justify-center gap-2' onClick={() => handleText(expectedFriend)}>
                             <span className='text-2xl'><LuMessageSquareMore /></span>
                             Text</button>
-                        <button className='btn py-10 flex flex-col items-center justify-center gap-2'><span ><PiVideoCameraBold className='text-2xl' /></span>
+                        <button className='btn py-10 flex flex-col items-center justify-center gap-2' onClick={() => handleVideo(expectedFriend)}><span ><PiVideoCameraBold className='text-2xl' /></span>
                             Video</button>
                     </div>
                 </div>
