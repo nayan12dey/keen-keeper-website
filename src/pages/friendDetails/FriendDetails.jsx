@@ -51,12 +51,12 @@ const FriendDetails = () => {
 
     return (
 
-        <div className="grid grid-cols-2 container mx-auto gap-8 my-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 container mx-auto gap-6 md:gap-8 my-6 md:my-10 px-4">
 
 
             {/* left column */}
             <div>
-                <div className="card bg-base-200 shadow-sm p-4 max-w-[70%] mx-auto hover:shadow-lg transition mb-3">
+                <div className="card bg-base-200 shadow-sm p-4 w-full md:max-w-[80%] mx-auto hover:shadow-lg transition mb-3">
                     <figure>
                         <img src={expectedFriend.picture} alt={expectedFriend.name} />
                     </figure>
@@ -101,7 +101,7 @@ const FriendDetails = () => {
                     </div>
                 </div>
 
-                <div className="flex flex-col gap-2 mt-4 max-w-[70%] mx-auto">
+                <div className="flex flex-col gap-2 mt-4 w-full md:max-w-[80%] mx-auto">
                     <button className="btn flex items-center gap-2 justify-center">
                         <PiBellSimpleZ className="text-xl" />
                         Snooze 2 weeks
@@ -123,7 +123,7 @@ const FriendDetails = () => {
 
             {/* right column */}
             <div className="mx-auto">
-                <div className="grid grid-cols-3 gap-3">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-3">
                     <div className="border border-gray-200 rounded-2xl shadow-md p-6 text-center hover:shadow-lg transition">
                         <p className="text-3xl font-bold text-[#244D3F]">
                             {expectedFriend.days_since_contact}
@@ -146,13 +146,13 @@ const FriendDetails = () => {
                     </div>
                 </div>
 
-                <div className='border border-gray-200 rounded-2xl shadow-md p-6 hover:shadow-lg transition flex  justify-between my-5'>
+                <div className='border border-gray-200 rounded-2xl shadow-md p-6 hover:shadow-lg transition flex flex-col lg:flex-row justify-between gap-4 my-5'>
                     <div className='space-y-2'>
                         <p className='font-bold text-[#244D3F] text-xl'>Relationship Goal</p>
                         <p className='text-xl text-gray-500'>Connect every <span className='font-bold text-black'>{expectedFriend.goal} days</span></p>
                     </div>
 
-                    <div>
+                    <div className='flex justify-center lg:justify-end'>
                         <button className='btn'>Edit</button>
                     </div>
                 </div>
@@ -160,7 +160,7 @@ const FriendDetails = () => {
 
                 <div className='border border-gray-200 rounded-2xl shadow-md p-6 hover:shadow-lg transition flex flex-col text-left my-5 space-y-3'>
                     <p className='text-lg text-[#244D3F]'>Quick Check-In</p>
-                    <div className="grid grid-cols-3 gap-3">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 ">
                         <button className='btn py-10 flex flex-col items-center justify-center gap-2' onClick={() => handleCall(expectedFriend)}>
                             <span className='text-2xl'><FiPhoneCall /></span>
                             Call</button>
