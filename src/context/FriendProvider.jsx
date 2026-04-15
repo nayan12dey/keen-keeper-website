@@ -31,7 +31,7 @@ const FriendProvider = ({ children }) => {
             name: currentFriend.name,
             type,
             date: currentFriend.next_due_date,
-            image: type === "Call" ? "/src/assets/call.png" : type === "Text" ? "/src/assets/text.png" : "/src/assets/video.png"
+            image: type === "Call" ? "/call.png" : type === "Text" ? "/text.png" : "/video.png"
         }
 
         setTimeline([...timeline, currentFriendData])
