@@ -13,15 +13,15 @@ const FriendProvider = ({ children }) => {
     const [timeline, setTimeline] = useState([]);
 
     const handleCall = (currentFriend) => {
-        addTimeline(currentFriend, "call")
+        addTimeline(currentFriend, "Call")
     }
 
     const handleText = (currentFriend) => {
-        addTimeline(currentFriend, "text")
+        addTimeline(currentFriend, "Text")
     }
 
     const handleVideo = (currentFriend) => {
-        addTimeline(currentFriend, "video");
+        addTimeline(currentFriend, "Video");
     }
 
 
@@ -30,19 +30,34 @@ const FriendProvider = ({ children }) => {
         const currentFriendData = {
             name: currentFriend.name,
             type,
-            date: currentFriend.next_due_date
+            date: currentFriend.next_due_date,
+            image: type === "Call" ? "/src/assets/call.png" : type === "Text" ? "/src/assets/text.png" : "/src/assets/video.png"
         }
 
-        setTimeline([...timeline, currentFriendData])                                
+        setTimeline([...timeline, currentFriendData])
     }
+
+
+    // for showing due date
+    const formatDate = (dateStr) => {
+        const [y, m, d] = dateStr.split("-");
+        const date = new Date(y, m - 1, d);
+
+        return date.toLocaleDateString("en-US", {
+            month: "short",
+            day: "numeric",
+            year: "numeric",
+        });
+    };
 
 
 
     const data = {
         timeline,
-        handleCall, 
+        handleCall,
         handleVideo,
-        handleText
+        handleText,
+        formatDate
 
     }
 

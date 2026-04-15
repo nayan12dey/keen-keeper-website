@@ -30,21 +30,11 @@ const FriendDetails = () => {
     // console.log(expectedFriend)
 
 
-    // for showing due date
-    const formatDate = (dateStr) => {
-        const [y, m, d] = dateStr.split("-");
-        const date = new Date(y, m - 1, d);
-
-        return date.toLocaleDateString("en-US", {
-            month: "short",
-            day: "numeric",
-            year: "numeric",
-        });
-    };
+    
 
 
     // used context api from friendProvider
-    const {handleCall, handleText, handleVideo} = useContext(FriendContext);
+    const {handleCall, handleText, handleVideo, formatDate} = useContext(FriendContext);
     // console.log("friendContext", handleCall);
     // console.log("StoredFriends", storedFriends)
 
