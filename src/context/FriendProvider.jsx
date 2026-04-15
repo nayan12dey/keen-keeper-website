@@ -35,6 +35,8 @@ const FriendProvider = ({ children }) => {
         }
 
         setTimeline([...timeline, currentFriendData])
+
+        toast.success(`${type} with ${currentFriend.name} added to timeline!`)
     }
 
 
