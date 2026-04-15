@@ -18,12 +18,12 @@ const Timeline = () => {
                 <div>
                     {
                         timeline.length === 0 ?
-                            <div className="p-10 text-center border-2 border-dashed border-gray-400 rounded-xl">
+                           ( <div className="p-10 text-center border-2 border-dashed border-gray-400 rounded-xl">
                                 <p className="text-2xl font-semibold text-gray-700">No Timeline Yet</p>
                                 <p className="mt-2 text-gray-500">
                                     Your activity will appear here once you start.
                                 </p>
-                            </div>
+                            </div> )
                             : (timeline.map((friend) => {
                                 return <div key={friend.id} className='border border-gray-200 rounded-2xl shadow-md p-6 text-center hover:shadow-lg transition my-5'>
                                     <div className='flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4'>
