@@ -5,22 +5,22 @@ import { FriendContext } from '../../context/FriendProvider';
 
 const Timeline = () => {
 
-    const {handleCall, storedCallFriends} = useContext(FriendContext);
-    console.log("handleCall", handleCall);
-    console.log("StoredCallFriends", storedCallFriends);
+    const { timeline } = useContext(FriendContext);
+    
+    console.log("timeline", timeline);
 
 
     return (
         <div>
-            <div>
-                <h2 className='text-5xl'>Timeline</h2>
-                
+            <div className='container mx-auto max-w-7xl p-20'>
+                <h2 className='text-5xl font-bold'>Timeline</h2>
+
                 <div>
-                        {
-                            storedCallFriends.map(callFriend => {
-                                return <div key={callFriend.id} className='border border-gray-200 rounded-2xl shadow-md p-6 text-center hover:shadow-lg transition my-5'>{callFriend.name}</div>
-                            })
-                        }
+                    {
+                        timeline.map(callFriend => {
+                            return <div key={callFriend.id} className='border border-gray-200 rounded-2xl shadow-md p-6 text-center hover:shadow-lg transition my-5'>{callFriend.name}</div>
+                        })
+                    }
                 </div>
             </div>
         </div>

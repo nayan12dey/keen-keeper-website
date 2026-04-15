@@ -9,70 +9,41 @@ export const FriendContext = createContext()
 
 const FriendProvider = ({ children }) => {
 
-
-    // for call
-    const [storedCallFriends, setStoredCallFriends] = useState([])
+    // for handle call,text and video 
+    const [timeline, setTimeline] = useState([]);
 
     const handleCall = (currentFriend) => {
-        // console.log("friendId", currentFriend);
-
-        const isCalled = storedCallFriends.find(friend => friend.id === currentFriend.id);
-
-        if (isCalled) {
-            toast.error(`The ${currentFriend.name} is already called and it is in timeline section`)
-        }
-        else {
-            setStoredCallFriends([...storedCallFriends, currentFriend]);
-            toast.success(`${currentFriend.name} is added to timeline`)
-        }
+        addTimeline(currentFriend, "call")
     }
-
-    // for text
-    const [storedTextFriends, setStoredTextFriends] = useState([])
 
     const handleText = (currentFriend) => {
-        console.log("text", currentFriend);
-
-        const isTexted = storedTextFriends.find(friend => friend.id === currentFriend.id)
-
-        if (isTexted) {
-            toast.error(`The ${currentFriend.name} is already message and it is in timeline section`)
-        }
-        else {
-            setStoredTextFriends([...storedTextFriends, currentFriend]);
-            toast.success(`${currentFriend.name} is added to timeline`)
-        }
+        addTimeline(currentFriend, "text")
     }
 
-    // for video
-    const [storedVideoFriends, setStoredVideoFriends] = useState([])
-
     const handleVideo = (currentFriend) => {
-        console.log("video call",currentFriend);
+        addTimeline(currentFriend, "video");
+    }
 
-        const isVideo = storedVideoFriends.find(friend => friend.id === currentFriend.id);
 
-        if (isVideo) {
-            toast.error(`The ${currentFriend.name} already video called and it is in timeline section`)
+    const addTimeline = (currentFriend, type) => {
+
+        const currentFriendData = {
+            name: currentFriend.name,
+            type,
+            date: currentFriend.next_due_date
         }
-        else {
-            setStoredVideoFriends([...storedVideoFriends, currentFriend]);
-            toast.success(`${currentFriend.name} is added to timeline`)
-        }
+
+        setTimeline([...timeline, currentFriendData])                                
     }
 
 
 
     const data = {
-        storedCallFriends,
-        setStoredCallFriends,
-        handleCall,
-        storedTextFriends,
-        setStoredTextFriends,
-        handleText,
-        storedVideoFriends,
-        setStoredVideoFriends,
-        handleVideo
+        timeline,
+        handleCall, 
+        handleVideo,
+        handleText
+
     }
 
 

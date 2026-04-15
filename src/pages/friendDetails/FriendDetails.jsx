@@ -44,7 +44,7 @@ const FriendDetails = () => {
 
 
     // used context api from friendProvider
-    const {handleCall, storedFriends, handleText, handleVideo} = useContext(FriendContext);
+    const {handleCall, handleText, handleVideo} = useContext(FriendContext);
     // console.log("friendContext", handleCall);
     // console.log("StoredFriends", storedFriends)
 
