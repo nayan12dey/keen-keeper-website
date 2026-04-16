@@ -70,4 +70,4 @@ const Statspage = () => {
     );
 };
 
-export default Statspage;
+export default Statspage;  

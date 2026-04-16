@@ -20,13 +20,13 @@ const Footer = () => {
             <nav>
                 <p className='text-xl'>Social Links</p>
                 <div className="grid grid-flow-col gap-4">
-                    <a className='bg-white rounded-full text-black text-2xl p-3'>
+                    <a className='bg-white rounded-full text-black text-2xl p-3 cursor-pointer'>
                         <TbBrandInstagramFilled />
                     </a>
-                    <a className='bg-white rounded-full text-black text-2xl p-3'>
+                    <a className='bg-white rounded-full text-black text-2xl p-3 cursor-pointer'>
                         <FaFacebookSquare />
                     </a>
-                    <a className='bg-white rounded-full text-black text-2xl p-3'>
+                    <a className='bg-white rounded-full text-black text-2xl p-3 cursor-pointer'>
 
                         <RiTwitterXFill />
                     </a>
@@ -38,7 +38,7 @@ const Footer = () => {
 
             <div className='flex flex-col gap-4 md:flex-row justify-between items-center'>
                 <div>
-                    <p className='text-gray-400'>© {new Date().getFullYear()} KeenKeeper. All rights reserved</p>
+                    <p className='text-gray-400'>© 2026 KeenKeeper. All rights reserved</p>
                 </div>
 
                 <div className='text-gray-500 flex gap-4 text-xs sm:text-base items-center'>
