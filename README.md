@@ -1,16 +1,36 @@
-# React + Vite
+# 👥 KeepKeeper — Keep Your Friendships Alive
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A friendship relationship manager that helps you stay connected with the people who matter. Track contact history, set goals, and never let an important relationship go cold.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠 Tech Stack
 
-## Expanding the ESLint configuration
+| Technology | Purpose |
+|---|---|
+| **React.js** | Core UI framework with file-based routing and SSR support |
+| **React Router DOM** | Client-side navigation between pages |
+| **Tailwind CSS** | Utility-first styling and responsive layout |
+| **Recharts** | Pie chart on the Analytics (Stats) page |
+| **friends.json** | Local data source for all friend profiles |
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+
+##  Key Features
+
+###  Friend Dashboard
+View all your friends in a color-coded grid. Status badges — **on-track**, **almost due**, and **overdue** — tell you at a glance who needs attention.
+
+###  Quick Check-ins
+Log a call, text, or video interaction with one tap. Each check-in auto-creates a timestamped timeline entry with a toast confirmation.
+
+### 📊 Friendship Analytics
+An interactive pie chart (Recharts) breaks down your interaction history by type — see whether you call, text, or video chat the most.
+
+---
+
+
+
