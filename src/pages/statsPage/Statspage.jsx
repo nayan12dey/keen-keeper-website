@@ -1,18 +1,43 @@
 
 
-import React from 'react';
+import React, { useContext } from 'react';
 import { Legend, Pie, PieChart, Tooltip } from 'recharts';
+import { FriendContext } from '../../context/FriendProvider';
 
 
 
 
-const data = [
-    { name: 'Call', value: 400, fill: '#244D3F' },
-    { name: 'Text', value: 300, fill: '#7E35E1' },
-    { name: 'Video', value: 300, fill: '#37A163' },
-];
+
 
 const Statspage = () => {
+
+    const { timeline } = useContext(FriendContext);
+    console.log(timeline);
+
+    const interactionTypeCount = {
+        Call: 0,
+        Text: 0,
+        Video: 0
+    }
+
+    // console.log(interactionTypeCount);
+
+    timeline.forEach(timeline => {
+        console.log(timeline)
+        interactionTypeCount[timeline.type]++;
+    })
+
+    console.log(interactionTypeCount);
+
+
+    const data = [
+        { name: 'Call', value: interactionTypeCount.Call, fill: '#244D3F' },
+        { name: 'Text', value: interactionTypeCount.Text, fill: '#7E35E1' },
+        { name: 'Video', value: interactionTypeCount.Video, fill: '#37A163' },
+    ];
+
+
+
     return (
         <div>
             <div className='container mx-auto max-w-7xl p-20'>
