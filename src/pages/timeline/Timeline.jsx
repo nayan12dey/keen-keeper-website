@@ -32,7 +32,7 @@ const Timeline = () => {
                 </div>
             <div>
                     {
-                        timeline.length === 0 ?
+                        filteredTimeline.length === 0 ?
                             (<div className="p-10 text-center border-2 border-dashed border-gray-400 rounded-xl mt-5">
                                 <p className="text-2xl font-semibold text-gray-700">No Timeline Yet</p>
                                 <p className="mt-2 text-gray-500">
