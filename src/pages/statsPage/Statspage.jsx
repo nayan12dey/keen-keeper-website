@@ -36,6 +36,8 @@ const Statspage = () => {
         { name: 'Video', value: interactionTypeCount.Video, fill: '#37A163' },
     ];
 
+    const existData = timeline.length > 0
+    console.log(existData);
 
 
     return (
@@ -46,7 +48,7 @@ const Statspage = () => {
                 <div className='border border-gray-200 rounded-2xl shadow-md p-6 hover:shadow-lg transition my-5'>
                     <p className='text-lg font-semibold text-[#244D3F] mb-5'>By Interaction Type</p>
                     <div className='flex justify-center'>
-                        <PieChart style={{ width: '100%', maxWidth: '300px', maxHeight: '80vh', aspectRatio: 1 }} responsive>
+                        {existData ? (<PieChart style={{ width: '100%', maxWidth: '300px', maxHeight: '80vh', aspectRatio: 1 }} responsive>
                             <Pie
                                 data={data}
                                 innerRadius="80%"
@@ -61,7 +63,12 @@ const Statspage = () => {
                             />
                             <Legend></Legend>
                             <Tooltip></Tooltip>
-                        </PieChart>
+                        </PieChart>) : (<div className="p-10 text-center border-2 border-dashed border-gray-400 rounded-xl mt-5">
+                                <p className="text-2xl font-semibold text-gray-700">No Interaction Data Yet</p>
+                                <p className="mt-2 text-gray-500">
+                                    Start adding calls, texts, or videos to see analytics.
+                                </p>
+                            </div>)}
                     </div>
                 </div>
 
