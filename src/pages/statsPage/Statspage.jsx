@@ -63,7 +63,7 @@ const Statspage = () => {
                             />
                             <Legend></Legend>
                             <Tooltip></Tooltip>
-                        </PieChart>) : (<div className="p-10 text-center border-2 border-dashed border-gray-400 rounded-xl mt-5">
+                        </PieChart>) : (<div className="p-10 text-center mt-5">
                                 <p className="text-2xl font-semibold text-gray-700">No Interaction Data Yet</p>
                                 <p className="mt-2 text-gray-500">
                                     Start adding calls, texts, or videos to see analytics.
