@@ -15,6 +15,10 @@ const Banner = () => {
                     <button className='btn bg-[#244D3F] text-white'><GoPlus className='text-xl' />
                         Add a Friend</button>
                 </div>
+
+              
+
+                
             </div>
 
 

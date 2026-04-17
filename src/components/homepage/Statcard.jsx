@@ -28,7 +28,10 @@ const Statcard = () => {
                         <p className="mt-2 text-gray-500">Interactions This Month</p>
                     </div>
 
+                    
+
                 </div>
+                  <div className="w-full border-b-2 border-gray-200 mt-20"></div>
             </div>
         </div>
     );
