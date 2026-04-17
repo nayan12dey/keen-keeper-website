@@ -40,9 +40,9 @@ const Timeline = () => {
                                 </p>
                             </div>)
                             : (filteredTimeline.map((friend, idx) => {
-                                return <div key={idx} className='border border-gray-200 rounded-2xl shadow-md p-6 text-center hover:shadow-lg transition my-5'>
+                                return <div key={idx} className='border border-gray-200 rounded-2xl shadow-md p-4 sm:p-6 hover:shadow-lg transition my-4 sm:my-5'>
                                     <div className='flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4'>
-                                        <img src={friend.image} alt="" className='w-10 h-10' />
+                                        <img src={friend.image} alt="" className='w-10 h-10 sm:w-12 sm:h-12 object-cover' />
                                         <div className='flex flex-col items-start'>
                                             <p className='text-gray-500 text-lg '><span className='text-[#244D3F] font-semibold'>{friend.type}</span> with {friend.name}</p>
                                             <p className='text-sm font-semibold text-gray-500'>{formatDate(friend.date)}</p>
